@@ -17,7 +17,7 @@ export default function Home() {
       >
       </Heading>
       {/* Products btn */} 
-      <div className='flex gap-4'>
+      <div className='flex-col lg:flex gap-4'>
       <Productsbtn products={products}></Productsbtn>
       <Outlet></Outlet>
       </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Card({card}) {
     const {product_image,product_title,price}= card
-    console.log(card)
+    // console.log(card)
   return (
     <div className="card bg-base-100 w-72 shadow-xl">
         <figure className="px-10 pt-10">
