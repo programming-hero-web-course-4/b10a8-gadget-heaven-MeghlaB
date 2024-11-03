@@ -1,10 +1,37 @@
-{
-    "products": [
-      { "product_id": 1, "category": "Computers" },
-      { "product_id": 2, "category": "Phones" },
-      { "product_id": 3, "category": "Chargers" },
-      { "product_id": 4, "category": "Smart Watches" },
-      { "product_id": 5, "category": "Power Banks" }
-    ]
+[
+  {
+    "product_id": 1,
+    "name": "All Products",
+    "slug": "all-product"
+  },
+  {
+    "product_id": 2,
+    "name": "Laptops",
+    "slug": "laptops"
+  },
+  {
+    "product_id": 3,
+    "name": "Phones",
+    "slug": "phones"
+  },
+  {
+    "product_id": 4,
+    "name": "Accessories",
+    "slug": "accessories"
+  },
+  {
+    "product_id": 5,
+    "name": "Smart Watches",
+    "slug": "smart-watches"
+  },
+  {
+    "product_id": 6,
+    "name": "MacBook",
+    "slug": "macbook"
+  },
+  {
+    "product_id": 7,
+    "name": "iPhone",
+    "slug": "iphone"
   }
-  
+]
