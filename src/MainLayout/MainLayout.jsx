@@ -9,7 +9,7 @@ export default function MainLayout() {
       {/* Navbar */}
       <Navbar></Navbar>
       {/* Others Components */}
-      <div className='min-h-[calc(100vh-288px)] py-6'>
+      <div className='min-h-[calc(100vh-288px) container mx-auto border] py-6'>
         <Outlet></Outlet>
       </div>
       {/* Footer */}

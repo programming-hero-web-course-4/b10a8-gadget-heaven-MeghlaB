@@ -28,10 +28,6 @@
     "product_id": 6,
     "name": "MacBook",
     "slug": "macbook"
-  },
-  {
-    "product_id": 7,
-    "name": "iPhone",
-    "slug": "iphone"
   }
+ 
 ]
