@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 export default function ProducsBtn({product}) {
-    // console.log(product)
+    console.log(product)
   return (
-    <div className=' '>
-        <Link to={`/product/${product.name}`}>
-              <button className='bg-[#F7F7F7] px-5 py-1 w-52 rounded-lg space-y-4'>{product.name}</button>
-        </Link>
+    <div className=' '> 
+        <NavLink className={({isActive})=>`bg-[#F7F7F7] px-5 py-3 w-52 rounded-lg space-y-4 ${isActive?'active bg-purple-700 text-white':''}`}  to={`/product/${product.name}` }>
+        {product.name}
+        </NavLink>
     </div>
   )
 }
