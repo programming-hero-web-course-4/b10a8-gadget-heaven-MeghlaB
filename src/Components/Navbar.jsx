@@ -1,11 +1,13 @@
 import React from 'react'
 import { FaHeart } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
-import { NavLink ,Link} from 'react-router-dom'
+import { NavLink ,Link, useLocation} from 'react-router-dom'
 
 export default function Navbar() {
+    const location = useLocation()
+    const isHomePage = location.pathname ==='/'
   return (
-    <div className="navbar bg-base-100 container mx-auto">
+    <div className={`navbar bg-base-100 container mx-auto`}>
         <div className="navbar-start">
             <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,6 +45,7 @@ export default function Navbar() {
             <Link> <TiShoppingCart></TiShoppingCart> </Link>
             <Link> <FaHeart></FaHeart> </Link>
         </div>
+      
     </div>
   )
 }
