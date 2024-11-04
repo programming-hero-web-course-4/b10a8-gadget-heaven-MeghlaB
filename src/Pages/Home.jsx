@@ -3,6 +3,7 @@ import Banner from '../Components/Banner'
 import Heading from '../Home/Heading'
 import { Outlet, useLoaderData } from 'react-router-dom'
 import Productsbtn from './Products'
+import Join from '../Components/Join'
 
 export default function Home() {
   const products = useLoaderData()
@@ -10,7 +11,7 @@ export default function Home() {
   return (
     <div>
         {/* banner */}
-      <Banner></Banner>
+      <Join></Join>
       {/* Heading */}
       <Heading
       title={'Explore Cutting-Edge Gadgets'}

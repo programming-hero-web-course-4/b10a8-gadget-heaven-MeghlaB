@@ -9,7 +9,7 @@ export default function Cards() {
     const [productsCard , setproductsCard] = useState([])
     useEffect(()=>{
       if(products && products.name){
-        if(products.name ==='All Products'){
+        if(products.name === 'All Products'){
           setproductsCard(Cards)
         }
        
@@ -24,8 +24,9 @@ export default function Cards() {
       
       
     },[Cards,products])
-
-
+    if(productsCard.length === 0){
+      return <div className='text-center flex items-center justify-center mx-36'><h1 className='text-5xl font-bold text-purple-600 mt-6'>404 not page find</h1></div>
+    }
 
   return (
     <div className='w-3/4'>
