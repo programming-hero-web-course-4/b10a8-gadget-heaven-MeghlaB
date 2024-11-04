@@ -15,14 +15,13 @@ export default function Home() {
         {/* banner */}
         <HomeBanner></HomeBanner>
         <Hero></Hero>
-      {/* <Join></Join> */}
       {/* Heading */}
       <Heading
       title={'Explore Cutting-Edge Gadgets'}
       >
       </Heading>
       {/* Products btn */} 
-      <div className='flex gap-4'>
+      <div className='flex gap-4 container mx-auto'>
       <Productsbtn products={products}></Productsbtn>
       <Outlet></Outlet>
       </div>

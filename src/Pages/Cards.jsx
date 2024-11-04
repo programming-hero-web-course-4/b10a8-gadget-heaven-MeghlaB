@@ -24,7 +24,7 @@ export default function Cards() {
       
       
     },[Cards,products])
-    if(productsCard.length === 0){
+    if(products.length === 0){
       return <div className='text-center flex items-center justify-center mx-36'><h1 className='text-5xl font-bold text-purple-600 mt-6'>404 not page find</h1></div>
     }
 

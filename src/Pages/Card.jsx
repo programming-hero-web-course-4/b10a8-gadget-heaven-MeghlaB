@@ -1,7 +1,7 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 export default function Card({card}) {
-    const {product_image,product_title,price}= card
+    const {product_image,product_title,price,product_id}= card
     // console.log(card)
   return (
     <div className="card bg-base-100 w-72 shadow-xl">
@@ -15,7 +15,7 @@ export default function Card({card}) {
             <h2 className="card-title">{product_title}</h2>
             <p className='text-gray-500'>Price: {price}</p>
             <div className="card-actions">
-            <button className="btn btn-outline btn-primary rounded-full">View Details</button>
+            <Link to={`/product/${product_id}`}><button className='btn btn-outline btn-primary rounded-full'>View Details</button></Link>
             </div>
         </div>
     </div>

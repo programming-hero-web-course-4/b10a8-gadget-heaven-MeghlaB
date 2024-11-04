@@ -7,7 +7,14 @@ import { NavLink ,Link, useLocation} from 'react-router-dom'
 // className={({isActive})=>`${isActive?' border px-5 py-3  rounded-2xl bg-purple-600 text-white':''}`}
 export default function Navbar() {
     const location = useLocation()
-    const isHomePage = location.pathname === "/";
+    const isHomePage = location.pathname === "/"||
+    location.pathname ==='/product/All%20Products'||
+    location.pathname=== '/product/Laptops'||
+    location.pathname ==='/product/Phones'||
+    location.pathname==='/product/Accessories'||
+    location.pathname ==='/product/Smart%20Watches'||
+    location.pathname ==='/product/MacBook';
+  
     // console.log(isHomePage)
   return (
     <div className={`navbar px-32 flex justify-between ${isHomePage?'absolute top-12 left-0  z-10 text-white':'relative'} `}>

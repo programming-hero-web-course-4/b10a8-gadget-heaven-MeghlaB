@@ -4,7 +4,8 @@ import Home from "../Pages/Home";
 import Cards from "../Pages/Cards";
 import Statistics from "../Components/Statistics";
 import Dashboard from "../Components/Dashboard";
-import Cartdetails from "../Pages/Cartdetails";
+import CardDetails from "../Pages/CardDetails";
+
 
 const router=createBrowserRouter([
     {
@@ -22,11 +23,11 @@ const router=createBrowserRouter([
                        element:<Cards></Cards>,
                        loader:()=>fetch('/AllProducts.json')
                     },
-                    {
-                       path:'/product/:name',
-                       element:<Cards></Cards>,
-                       loader:()=>fetch('/AllProducts.json')
-                    }
+                    // {
+                    //    path:'/product/:name',
+                    //    element:<Cards></Cards>,
+                    //    loader:()=>fetch('/AllProducts.json')
+                    // }
                 ]
             },
             {
@@ -38,10 +39,17 @@ const router=createBrowserRouter([
             {
                 path:'/dashboard',
                 element:<Dashboard></Dashboard>
+            },
+            {
+                path:'/product/:product_id',
+                element:<CardDetails></CardDetails>,
+                loader:()=>fetch('/AllProducts.json')
             }
-
+           
         ]
     }
+   
+
 ])
 
 export default router
