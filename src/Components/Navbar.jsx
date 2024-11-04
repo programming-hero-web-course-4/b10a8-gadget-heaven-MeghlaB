@@ -2,12 +2,15 @@ import React from 'react'
 import { FaHeart } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 import { NavLink ,Link, useLocation} from 'react-router-dom'
-
+// const isHomePage = location.pathname ==='/'? "bg-purple-600  -mb-12 text-white rounded-t-2xl":"text-black bg-white"
+// container mx-auto mt-2 gap-4
+// className={({isActive})=>`${isActive?' border px-5 py-3  rounded-2xl bg-purple-600 text-white':''}`}
 export default function Navbar() {
     const location = useLocation()
-    const isHomePage = location.pathname ==='/'? "bg-purple-600  -mb-12 text-white rounded-t-2xl":"text-black bg-white"
+    const isHomePage = location.pathname === "/";
+    // console.log(isHomePage)
   return (
-    <div className={`navbar container mx-auto mt-2 ${isHomePage} gap-4`}>
+    <div className={`navbar px-32 flex justify-between ${isHomePage?'absolute top-12 left-0  z-10 text-white':'relative'} `}>
         <div className="navbar-start">
             <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,14 +39,14 @@ export default function Navbar() {
         </div>
         <div className="navbar-center hidden lg:flex font-bold text-[16px]">
             <ul className="menu menu-horizontal px-1 gap-4">
-            <NavLink className={({isActive})=>`${isActive?' border px-5 py-3  rounded-2xl bg-purple-600 text-white':''}`} to={'/'}>Home</NavLink>
-            <NavLink className={({isActive})=>`${isActive?' border px-5 py-3  rounded-2xl bg-purple-600 text-white':''}`} to={'/statistics'}>Statistics</NavLink>
-            <NavLink className={({isActive})=>`${isActive?'border px-5 py-3 rounded-2xl bg-purple-600 text-white':''}`}  to={'/dashboard'}>Dashboard</NavLink>
+            <NavLink  to={'/'}>Home</NavLink>
+            <NavLink  to={'/statistics'}>Statistics</NavLink>
+            <NavLink  to={'/dashboard'}>Dashboard</NavLink>
             </ul>
         </div>
         <div className="navbar-end gap-4 text-2xl">
-            <Link> <TiShoppingCart></TiShoppingCart> </Link>
-            <Link> <FaHeart></FaHeart> </Link>
+            <Link  className='w-10 h-10 rounded-full border flex items-center justify-center'> <TiShoppingCart ></TiShoppingCart> </Link>
+            <Link  className='w-10 h-10 rounded-full border flex items-center justify-center' > <FaHeart></FaHeart> </Link>
         </div>
       
     </div>

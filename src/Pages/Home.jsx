@@ -1,9 +1,11 @@
 import React from 'react'
-import Banner from '../Components/Banner'
+// import Banner from '../Components/HomeBanner'
 import Heading from '../Home/Heading'
 import { Outlet, useLoaderData } from 'react-router-dom'
 import Productsbtn from './Products'
-import Join from '../Components/Join'
+import HomeBanner from '../Components/HomeBanner'
+import Hero from '../Components/Hero'
+// import Join from '../Components/Join'
 
 export default function Home() {
   const products = useLoaderData()
@@ -11,7 +13,9 @@ export default function Home() {
   return (
     <div>
         {/* banner */}
-      <Join></Join>
+        <HomeBanner></HomeBanner>
+        <Hero></Hero>
+      {/* <Join></Join> */}
       {/* Heading */}
       <Heading
       title={'Explore Cutting-Edge Gadgets'}

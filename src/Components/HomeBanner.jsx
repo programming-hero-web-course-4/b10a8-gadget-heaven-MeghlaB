@@ -1,9 +1,9 @@
 import React from 'react'
 import Hero from './Hero'
-export default function Banner() {
+export default function HomeBanner() {
   return (
     <div className=' '>
-      <div className="  bg-purple-600 min-h-[400px] gap-1 rounded-lg">
+      <div className=" pt-12 bg-purple-600 min-h-[500px] gap-1 rounded-lg">
         <div className="hero-content items-center text-center ">
             <div className="pt-6">
             <h1 className="text-xl md:text-2xl pt-0 lg:text-5xl font-bold text-white">Upgrade Your Tech Accessorize with Gadget Heaven Accessories</h1>
